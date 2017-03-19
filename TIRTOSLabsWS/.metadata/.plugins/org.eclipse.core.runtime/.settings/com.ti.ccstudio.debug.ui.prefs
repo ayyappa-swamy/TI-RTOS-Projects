@@ -1,0 +1,5 @@
+MODULES_MRU_PATH=/home/ayyappa/TIRTOSLabsWS/blink_TM4C_SWI/Debug/blink_TM4C_SWI.out
+MODULES_MRU_PATH.1=/home/ayyappa/TIRTOSLabsWS/Lab_02/Debug/Lab_02.out
+eclipse.preferences.version=1
+symbolAutoCompleteHistory<seperator>org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser<seperator>Stellaris\ In-Circuit\ Debug\ Interface\\CORTEX_M4_0=&i16ToggleCount
+useAnnotationsPrefPage=true

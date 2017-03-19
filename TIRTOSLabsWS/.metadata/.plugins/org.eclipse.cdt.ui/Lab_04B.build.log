@@ -1,0 +1,47 @@
+
+**** Build of configuration Debug for project Lab_04B ****
+
+/home/ayyappa/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../empty.cfg
+Invoking: XDCtools
+"/home/ayyappa/ti/xdctools_3_31_03_43_core/xs" --xdcpath="/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/tidrivers_tivac_2_16_01_13/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ndk_2_25_00_09/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/uia_2_00_05_50/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ns_1_11_00_10/packages;/home/ayyappa/ti/ccsv6/ccs_base;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.tiva:TM4C1294NCPDT -r release -c "/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS" --compileOptions "-mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path=\"/home/ayyappa/TIRTOSLabsWS/Lab_04B\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/posix\" --include_path=\"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include\" -g --gcc --define=ccs=\"ccs\" --define=PART_TM4C1294NCPDT --define=ccs --define=TIVAWARE --diag_wrap=off --display_error_number --diag_warning=225 --diag_warning=255 --gen_func_subsections=on --abi=eabi  " "../empty.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring empty.xem4f from package/cfg/empty_pem4f.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making /home/ayyappa/TIRTOSLabsWS/Lab_04B/src/sysbios/sysbios.aem4f ...
+gmake[1]: Entering directory `/home/ayyappa/TIRTOSLabsWS/Lab_04B/src/sysbios'
+clem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/BIOS.c ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/Hwi_asm.sv7M ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/Hwi_asm_switch.sv7M ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/IntrinsicsSupport_asm.sv7M ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/TaskSupport_asm.sv7M ...
+arem4f BIOS.obj m3_Hwi_asm.obj m3_Hwi_asm_switch.obj m3_IntrinsicsSupport_asm.obj m3_TaskSupport_asm.obj ...
+gmake[1]: Leaving directory `/home/ayyappa/TIRTOSLabsWS/Lab_04B/src/sysbios'
+Build of libraries done.
+clem4f package/cfg/empty_pem4f.c ...
+Finished building: ../empty.cfg
+ 
+making ../src/sysbios/sysbios.aem4f ...
+gmake[1]: Entering directory '/home/ayyappa/TIRTOSLabsWS/Lab_04B/src/sysbios'
+gmake[1]: Nothing to be done for 'all'.
+gmake[1]: Leaving directory '/home/ayyappa/TIRTOSLabsWS/Lab_04B/src/sysbios'
+Building file: ../EK_TM4C1294XL.c
+Invoking: ARM Compiler
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/ayyappa/TIRTOSLabsWS/Lab_04B" --include_path="/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b" --include_path="/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/posix" --include_path="/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C1294NCPDT --define=ccs --define=TIVAWARE --diag_wrap=off --display_error_number --diag_warning=225 --diag_warning=255 --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="EK_TM4C1294XL.d" --cmd_file="configPkg/compiler.opt" "../EK_TM4C1294XL.c"
+Finished building: ../EK_TM4C1294XL.c
+ 
+Building file: ../empty.c
+Invoking: ARM Compiler
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/ayyappa/TIRTOSLabsWS/Lab_04B" --include_path="/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b" --include_path="/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/posix" --include_path="/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C1294NCPDT --define=ccs --define=TIVAWARE --diag_wrap=off --display_error_number --diag_warning=225 --diag_warning=255 --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="empty.d" --cmd_file="configPkg/compiler.opt" "../empty.c"
+Finished building: ../empty.c
+ 
+Building target: Lab_04B.out
+Invoking: ARM Linker
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C1294NCPDT --define=ccs --define=TIVAWARE --diag_wrap=off --display_error_number --diag_warning=225 --diag_warning=255 --gen_func_subsections=on --abi=eabi -z -m"Lab_04B.map" --stack_size=512 --heap_size=0 -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --display_error_number --warn_sections --diag_wrap=off --xml_link_info="Lab_04B_linkInfo.xml" --rom_model -o "Lab_04B.out" "./EK_TM4C1294XL.obj" "./empty.obj" "../EK_TM4C1294XL.cmd" -l"configPkg/linker.cmd" -l"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b/grlib/ccs/Debug/grlib.lib" -l"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b/usblib/ccs/Debug/usblib.lib" -l"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b/driverlib/ccs/Debug/driverlib.lib" -llibc.a 
+<Linking>
+Finished building target: Lab_04B.out
+ 
+
+**** Build Finished ****

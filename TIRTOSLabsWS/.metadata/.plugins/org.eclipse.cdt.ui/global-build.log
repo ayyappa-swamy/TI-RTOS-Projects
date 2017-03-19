@@ -1,0 +1,317 @@
+
+**** Clean-only build of configuration Debug for project blink_TM4C_CLK ****
+
+/home/ayyappa/ti/ccsv6/utils/bin/gmake -k clean 
+rm -rf  "blink_TM4C_CLK.out"  "configPkg/linker.cmd" "configPkg/compiler.opt"  "blink_TM4C_CLK.hex" 
+rm -rf  "configPkg/" 
+rm -rf "main.d" 
+rm -rf "main.obj" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blink_TM4C_CLK ****
+
+/home/ayyappa/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../empty.cfg
+Invoking: XDCtools
+"/home/ayyappa/ti/xdctools_3_31_03_43_core/xs" --xdcpath="/home/ayyappa/ti/ccsv6/ccs_base;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/tidrivers_tivac_2_16_01_13/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ndk_2_25_00_09/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/uia_2_00_05_50/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ns_1_11_00_10/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.tiva:TM4C1294NCPDT -r release -c "/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS" --compileOptions "-mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path=\"/home/ayyappa/TIRTOSLabsWS/Lab_05\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/posix\" --include_path=\"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include\" -g --gcc --define=ccs=\"ccs\" --define=PART_TM4C1294NCPDT --define=ccs --define=TIVAWARE --diag_wrap=off --display_error_number --diag_warning=225 --diag_warning=255 --gen_func_subsections=on --abi=eabi  " "../empty.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring empty.xem4f from package/cfg/empty_pem4f.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making /home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios/sysbios.aem4f ...
+gmake[1]: Entering directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+clem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/BIOS.c ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/Hwi_asm.sv7M ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/Hwi_asm_switch.sv7M ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/IntrinsicsSupport_asm.sv7M ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/TaskSupport_asm.sv7M ...
+arem4f BIOS.obj m3_Hwi_asm.obj m3_Hwi_asm_switch.obj m3_IntrinsicsSupport_asm.obj m3_TaskSupport_asm.obj ...
+gmake[1]: Leaving directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+Build of libraries done.
+clem4f package/cfg/empty_pem4f.c ...
+warning: ti.tirtos.TIRTOS: "/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages/ti/tirtos/TIRTOS.xs", line 49: ti.tirtos.TIRTOS : ti.tirtos.TIRTOS module is no longer required to configure driver instrumentation.  Please use the ti.drivers.Config and ti.mw.Config modules instead.
+Finished building: ../empty.cfg
+ 
+Building file: ../main.c
+Invoking: ARM Compiler
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --include_path="/home/ayyappa/ti/tivaWare" -g --gcc --define=ccs --define=TIVAWARE --define=ccs="ccs" --define=PART_TM4C1294NCPDT --diag_wrap=off --display_error_number --diag_warning=225 --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="main.d" --cmd_file="configPkg/compiler.opt" "../main.c"
+Finished building: ../main.c
+ 
+Building target: blink_TM4C_CLK.out
+Invoking: ARM Linker
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs --define=TIVAWARE --define=ccs="ccs" --define=PART_TM4C1294NCPDT --diag_wrap=off --display_error_number --diag_warning=225 --gen_func_subsections=on --abi=eabi -z -m"blink_TM4C_CLK.map" --stack_size=512 --heap_size=0 -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --display_error_number --warn_sections --diag_wrap=off --xml_link_info="blink_TM4C_CLK_linkInfo.xml" --rom_model -o "blink_TM4C_CLK.out" "./main.obj" "../tm4c1294ncpdt.cmd" -l"configPkg/linker.cmd" -llibc.a -l"/home/ayyappa/ti/tivaWare/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: blink_TM4C_CLK.out
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project blink_TM4C_CLK ****
+
+/home/ayyappa/ti/ccsv6/utils/bin/gmake -k clean 
+rm -rf  "blink_TM4C_CLK.out"  "configPkg/linker.cmd" "configPkg/compiler.opt"  "blink_TM4C_CLK.hex" 
+rm -rf  "configPkg/" 
+rm -rf "main.d" 
+rm -rf "main.obj" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blink_TM4C_CLK ****
+
+/home/ayyappa/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../empty.cfg
+Invoking: XDCtools
+"/home/ayyappa/ti/xdctools_3_31_03_43_core/xs" --xdcpath="/home/ayyappa/ti/ccsv6/ccs_base;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/tidrivers_tivac_2_16_01_13/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ndk_2_25_00_09/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/uia_2_00_05_50/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ns_1_11_00_10/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.tiva:TM4C1294NCPDT -r release -c "/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS" --compileOptions "-mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path=\"/home/ayyappa/TIRTOSLabsWS/Lab_05\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/posix\" --include_path=\"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include\" -g --gcc --define=ccs=\"ccs\" --define=PART_TM4C1294NCPDT --define=ccs --define=TIVAWARE --diag_wrap=off --display_error_number --diag_warning=225 --diag_warning=255 --gen_func_subsections=on --abi=eabi  " "../empty.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring empty.xem4f from package/cfg/empty_pem4f.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making /home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios/sysbios.aem4f ...
+gmake[1]: Entering directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+clem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/BIOS.c ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/Hwi_asm.sv7M ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/Hwi_asm_switch.sv7M ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/IntrinsicsSupport_asm.sv7M ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/TaskSupport_asm.sv7M ...
+arem4f BIOS.obj m3_Hwi_asm.obj m3_Hwi_asm_switch.obj m3_IntrinsicsSupport_asm.obj m3_TaskSupport_asm.obj ...
+gmake[1]: Leaving directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+Build of libraries done.
+clem4f package/cfg/empty_pem4f.c ...
+warning: ti.tirtos.TIRTOS: "/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages/ti/tirtos/TIRTOS.xs", line 49: ti.tirtos.TIRTOS : ti.tirtos.TIRTOS module is no longer required to configure driver instrumentation.  Please use the ti.drivers.Config and ti.mw.Config modules instead.
+Finished building: ../empty.cfg
+ 
+Building file: ../main.c
+Invoking: ARM Compiler
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --include_path="/home/ayyappa/ti/tivaWare" -g --gcc --define=ccs --define=TIVAWARE --define=ccs="ccs" --define=PART_TM4C1294NCPDT --diag_wrap=off --display_error_number --diag_warning=225 --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="main.d" --cmd_file="configPkg/compiler.opt" "../main.c"
+Finished building: ../main.c
+ 
+Building target: blink_TM4C_CLK.out
+Invoking: ARM Linker
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs --define=TIVAWARE --define=ccs="ccs" --define=PART_TM4C1294NCPDT --diag_wrap=off --display_error_number --diag_warning=225 --gen_func_subsections=on --abi=eabi -z -m"blink_TM4C_CLK.map" --stack_size=512 --heap_size=0 -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --display_error_number --warn_sections --diag_wrap=off --xml_link_info="blink_TM4C_CLK_linkInfo.xml" --rom_model -o "blink_TM4C_CLK.out" "./main.obj" "../tm4c1294ncpdt.cmd" -l"configPkg/linker.cmd" -llibc.a -l"/home/ayyappa/ti/tivaWare/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: blink_TM4C_CLK.out
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project blink_TM4C_CLK ****
+
+/home/ayyappa/ti/ccsv6/utils/bin/gmake -k clean 
+rm -rf  "blink_TM4C_CLK.out"  "configPkg/linker.cmd" "configPkg/compiler.opt"  "blink_TM4C_CLK.hex" 
+rm -rf  "configPkg/" 
+rm -rf "main.d" 
+rm -rf "main.obj" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blink_TM4C_CLK ****
+
+/home/ayyappa/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../empty.cfg
+Invoking: XDCtools
+"/home/ayyappa/ti/xdctools_3_31_03_43_core/xs" --xdcpath="/home/ayyappa/ti/ccsv6/ccs_base;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/tidrivers_tivac_2_16_01_13/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ndk_2_25_00_09/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/uia_2_00_05_50/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ns_1_11_00_10/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.tiva:TM4C1294NCPDT -r release -c "/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS" --compileOptions "-mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path=\"/home/ayyappa/TIRTOSLabsWS/Lab_05\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/posix\" --include_path=\"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include\" -g --gcc --define=ccs=\"ccs\" --define=PART_TM4C1294NCPDT --define=ccs --define=TIVAWARE --diag_wrap=off --display_error_number --diag_warning=225 --diag_warning=255 --gen_func_subsections=on --abi=eabi  " "../empty.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring empty.xem4f from package/cfg/empty_pem4f.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making /home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios/sysbios.aem4f ...
+gmake[1]: Entering directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Leaving directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+Build of libraries done.
+clem4f package/cfg/empty_pem4f.c ...
+warning: ti.tirtos.TIRTOS: "/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages/ti/tirtos/TIRTOS.xs", line 49: ti.tirtos.TIRTOS : ti.tirtos.TIRTOS module is no longer required to configure driver instrumentation.  Please use the ti.drivers.Config and ti.mw.Config modules instead.
+Finished building: ../empty.cfg
+ 
+Building file: ../main.c
+Invoking: ARM Compiler
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --include_path="/home/ayyappa/ti/tivaWare" -g --gcc --define=ccs --define=TIVAWARE --define=ccs="ccs" --define=PART_TM4C1294NCPDT --diag_wrap=off --display_error_number --diag_warning=225 --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="main.d" --cmd_file="configPkg/compiler.opt" "../main.c"
+Finished building: ../main.c
+ 
+Building target: blink_TM4C_CLK.out
+Invoking: ARM Linker
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs --define=TIVAWARE --define=ccs="ccs" --define=PART_TM4C1294NCPDT --diag_wrap=off --display_error_number --diag_warning=225 --gen_func_subsections=on --abi=eabi -z -m"blink_TM4C_CLK.map" --stack_size=512 --heap_size=0 -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --display_error_number --warn_sections --diag_wrap=off --xml_link_info="blink_TM4C_CLK_linkInfo.xml" --rom_model -o "blink_TM4C_CLK.out" "./main.obj" "../tm4c1294ncpdt.cmd" -l"configPkg/linker.cmd" -llibc.a -l"/home/ayyappa/ti/tivaWare/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: blink_TM4C_CLK.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blink_TM4C_CLK ****
+
+/home/ayyappa/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: ARM Compiler
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --include_path="/home/ayyappa/ti/tivaWare" -g --gcc --define=ccs --define=TIVAWARE --define=ccs="ccs" --define=PART_TM4C1294NCPDT --diag_wrap=off --display_error_number --diag_warning=225 --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="main.d" --cmd_file="configPkg/compiler.opt" "../main.c"
+"../main.c", line 87: warning #179-D: variable "ui32Period" was declared but never referenced
+Finished building: ../main.c
+ 
+Building file: ../empty.cfg
+Invoking: XDCtools
+"/home/ayyappa/ti/xdctools_3_31_03_43_core/xs" --xdcpath="/home/ayyappa/ti/ccsv6/ccs_base;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/tidrivers_tivac_2_16_01_13/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ndk_2_25_00_09/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/uia_2_00_05_50/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ns_1_11_00_10/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.tiva:TM4C1294NCPDT -r release -c "/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS" --compileOptions "-mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path=\"/home/ayyappa/TIRTOSLabsWS/Lab_05\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/posix\" --include_path=\"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include\" -g --gcc --define=ccs=\"ccs\" --define=PART_TM4C1294NCPDT --define=ccs --define=TIVAWARE --diag_wrap=off --display_error_number --diag_warning=225 --diag_warning=255 --gen_func_subsections=on --abi=eabi  " "../empty.cfg"
+configuring empty.xem4f from package/cfg/empty_pem4f.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making /home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios/sysbios.aem4f ...
+gmake[1]: Entering directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Leaving directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+Build of libraries done.
+clem4f package/cfg/empty_pem4f.c ...
+warning: ti.tirtos.TIRTOS: "/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages/ti/tirtos/TIRTOS.xs", line 49: ti.tirtos.TIRTOS : ti.tirtos.TIRTOS module is no longer required to configure driver instrumentation.  Please use the ti.drivers.Config and ti.mw.Config modules instead.
+Finished building: ../empty.cfg
+ 
+Building target: blink_TM4C_CLK.out
+Invoking: ARM Linker
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs --define=TIVAWARE --define=ccs="ccs" --define=PART_TM4C1294NCPDT --diag_wrap=off --display_error_number --diag_warning=225 --gen_func_subsections=on --abi=eabi -z -m"blink_TM4C_CLK.map" --stack_size=512 --heap_size=0 -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --display_error_number --warn_sections --diag_wrap=off --xml_link_info="blink_TM4C_CLK_linkInfo.xml" --rom_model -o "blink_TM4C_CLK.out" "./main.obj" "../tm4c1294ncpdt.cmd" -l"configPkg/linker.cmd" -llibc.a -l"/home/ayyappa/ti/tivaWare/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+warning #10229-D: output section ".data" refers to load symbol "Timer_ISR" and hence cannot be compressed; compression "rle" is ignored
+
+ undefined first referenced                                                                       
+  symbol       in file                                                                            
+ --------- ----------------                                                                       
+ Timer_ISR /home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/Debug/configPkg/package/cfg/empty_pem4f.oem4f
+
+>> Compilation failure
+makefile:139: recipe for target 'blink_TM4C_CLK.out' failed
+ ledtoggle /home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/Debug/configPkg/package/cfg/empty_pem4f.oem4f
+
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "blink_TM4C_CLK.out" not built
+gmake: *** [blink_TM4C_CLK.out] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blink_TM4C_CLK ****
+
+/home/ayyappa/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: ARM Compiler
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --include_path="/home/ayyappa/ti/tivaWare" -g --gcc --define=ccs --define=TIVAWARE --define=ccs="ccs" --define=PART_TM4C1294NCPDT --diag_wrap=off --display_error_number --diag_warning=225 --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="main.d" --cmd_file="configPkg/compiler.opt" "../main.c"
+"../main.c", line 87: warning #179-D: variable "ui32Period" was declared but never referenced
+Finished building: ../main.c
+ 
+Building file: ../empty.cfg
+Invoking: XDCtools
+"/home/ayyappa/ti/xdctools_3_31_03_43_core/xs" --xdcpath="/home/ayyappa/ti/ccsv6/ccs_base;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/tidrivers_tivac_2_16_01_13/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ndk_2_25_00_09/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/uia_2_00_05_50/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ns_1_11_00_10/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.tiva:TM4C1294NCPDT -r release -c "/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS" --compileOptions "-mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path=\"/home/ayyappa/TIRTOSLabsWS/Lab_05\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/posix\" --include_path=\"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include\" -g --gcc --define=ccs=\"ccs\" --define=PART_TM4C1294NCPDT --define=ccs --define=TIVAWARE --diag_wrap=off --display_error_number --diag_warning=225 --diag_warning=255 --gen_func_subsections=on --abi=eabi  " "../empty.cfg"
+configuring empty.xem4f from package/cfg/empty_pem4f.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making /home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios/sysbios.aem4f ...
+gmake[1]: Entering directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+clem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/BIOS.c ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/Hwi_asm.sv7M ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/Hwi_asm_switch.sv7M ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/IntrinsicsSupport_asm.sv7M ...
+asmem4f /home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/arm/m3/TaskSupport_asm.sv7M ...
+arem4f BIOS.obj m3_Hwi_asm.obj m3_Hwi_asm_switch.obj m3_IntrinsicsSupport_asm.obj m3_TaskSupport_asm.obj ...
+gmake[1]: Leaving directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+Build of libraries done.
+clem4f package/cfg/empty_pem4f.c ...
+warning: ti.tirtos.TIRTOS: "/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages/ti/tirtos/TIRTOS.xs", line 49: ti.tirtos.TIRTOS : ti.tirtos.TIRTOS module is no longer required to configure driver instrumentation.  Please use the ti.drivers.Config and ti.mw.Config modules instead.
+Finished building: ../empty.cfg
+ 
+Building target: blink_TM4C_CLK.out
+Invoking: ARM Linker
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs --define=TIVAWARE --define=ccs="ccs" --define=PART_TM4C1294NCPDT --diag_wrap=off --display_error_number --diag_warning=225 --gen_func_subsections=on --abi=eabi -z -m"blink_TM4C_CLK.map" --stack_size=512 --heap_size=0 -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --display_error_number --warn_sections --diag_wrap=off --xml_link_info="blink_TM4C_CLK_linkInfo.xml" --rom_model -o "blink_TM4C_CLK.out" "./main.obj" "../tm4c1294ncpdt.cmd" -l"configPkg/linker.cmd" -llibc.a -l"/home/ayyappa/ti/tivaWare/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+warning #10229-D: output section ".data" refers to load symbol "ledtoggle" and hence cannot be compressed; compression "rle" is ignored
+
+>> Compilation failure
+makefile:139: recipe for target 'blink_TM4C_CLK.out' failed
+
+ undefined first referenced                                                                       
+  symbol       in file                                                                            
+ --------- ----------------                                                                       
+ ledtoggle /home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/Debug/configPkg/package/cfg/empty_pem4f.oem4f
+
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "blink_TM4C_CLK.out" not built
+gmake: *** [blink_TM4C_CLK.out] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blink_TM4C_CLK ****
+
+/home/ayyappa/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: ARM Compiler
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --include_path="/home/ayyappa/ti/tivaWare" -g --gcc --define=ccs --define=TIVAWARE --define=ccs="ccs" --define=PART_TM4C1294NCPDT --diag_wrap=off --display_error_number --diag_warning=225 --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="main.d" --cmd_file="configPkg/compiler.opt" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../empty.cfg
+Invoking: XDCtools
+"/home/ayyappa/ti/xdctools_3_31_03_43_core/xs" --xdcpath="/home/ayyappa/ti/ccsv6/ccs_base;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/tidrivers_tivac_2_16_01_13/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ndk_2_25_00_09/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/uia_2_00_05_50/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ns_1_11_00_10/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.tiva:TM4C1294NCPDT -r release -c "/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS" --compileOptions "-mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path=\"/home/ayyappa/TIRTOSLabsWS/Lab_05\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/posix\" --include_path=\"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include\" -g --gcc --define=ccs=\"ccs\" --define=PART_TM4C1294NCPDT --define=ccs --define=TIVAWARE --diag_wrap=off --display_error_number --diag_warning=225 --diag_warning=255 --gen_func_subsections=on --abi=eabi  " "../empty.cfg"
+configuring empty.xem4f from package/cfg/empty_pem4f.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making /home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios/sysbios.aem4f ...
+gmake[1]: Entering directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Leaving directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+Build of libraries done.
+clem4f package/cfg/empty_pem4f.c ...
+warning: ti.tirtos.TIRTOS: "/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages/ti/tirtos/TIRTOS.xs", line 49: ti.tirtos.TIRTOS : ti.tirtos.TIRTOS module is no longer required to configure driver instrumentation.  Please use the ti.drivers.Config and ti.mw.Config modules instead.
+Finished building: ../empty.cfg
+ 
+Building target: blink_TM4C_CLK.out
+Invoking: ARM Linker
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs --define=TIVAWARE --define=ccs="ccs" --define=PART_TM4C1294NCPDT --diag_wrap=off --display_error_number --diag_warning=225 --gen_func_subsections=on --abi=eabi -z -m"blink_TM4C_CLK.map" --stack_size=512 --heap_size=0 -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --display_error_number --warn_sections --diag_wrap=off --xml_link_info="blink_TM4C_CLK_linkInfo.xml" --rom_model -o "blink_TM4C_CLK.out" "./main.obj" "../tm4c1294ncpdt.cmd" -l"configPkg/linker.cmd" -llibc.a -l"/home/ayyappa/ti/tivaWare/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: blink_TM4C_CLK.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blink_TM4C_CLK ****
+
+/home/ayyappa/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blink_TM4C_CLK ****
+
+/home/ayyappa/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../empty.cfg
+Invoking: XDCtools
+"/home/ayyappa/ti/xdctools_3_31_03_43_core/xs" --xdcpath="/home/ayyappa/ti/ccsv6/ccs_base;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/tidrivers_tivac_2_16_01_13/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ndk_2_25_00_09/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/uia_2_00_05_50/packages;/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/ns_1_11_00_10/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.tiva:TM4C1294NCPDT -r release -c "/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS" --compileOptions "-mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path=\"/home/ayyappa/TIRTOSLabsWS/Lab_05\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b\" --include_path=\"/home/ayyappa/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/posix\" --include_path=\"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include\" -g --gcc --define=ccs=\"ccs\" --define=PART_TM4C1294NCPDT --define=ccs --define=TIVAWARE --diag_wrap=off --display_error_number --diag_warning=225 --diag_warning=255 --gen_func_subsections=on --abi=eabi  " "../empty.cfg"
+configuring empty.xem4f from package/cfg/empty_pem4f.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making /home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios/sysbios.aem4f ...
+gmake[1]: Entering directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Leaving directory `/home/ayyappa/TIRTOSLabsWS/blink_TM4C_CLK/src/sysbios'
+Build of libraries done.
+clem4f package/cfg/empty_pem4f.c ...
+warning: ti.tirtos.TIRTOS: "/home/ayyappa/ti/tirtos_tivac_2_16_01_14/packages/ti/tirtos/TIRTOS.xs", line 49: ti.tirtos.TIRTOS : ti.tirtos.TIRTOS module is no longer required to configure driver instrumentation.  Please use the ti.drivers.Config and ti.mw.Config modules instead.
+Finished building: ../empty.cfg
+ 
+Building target: blink_TM4C_CLK.out
+Invoking: ARM Linker
+"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs --define=TIVAWARE --define=ccs="ccs" --define=PART_TM4C1294NCPDT --diag_wrap=off --display_error_number --diag_warning=225 --gen_func_subsections=on --abi=eabi -z -m"blink_TM4C_CLK.map" --stack_size=512 --heap_size=0 -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"/home/ayyappa/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --display_error_number --warn_sections --diag_wrap=off --xml_link_info="blink_TM4C_CLK_linkInfo.xml" --rom_model -o "blink_TM4C_CLK.out" "./main.obj" "../tm4c1294ncpdt.cmd" -l"configPkg/linker.cmd" -llibc.a -l"/home/ayyappa/ti/tivaWare/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: blink_TM4C_CLK.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blink_TM4C_CLK ****
+
+/home/ayyappa/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****

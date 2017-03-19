@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="FilterExpression">
+	</section>
+	<section name="Set Filter Expression in Live Session">
+		<item value="Message" key="fieldName1"/>
+		<item value="443" key="w"/>
+		<item value="false" key="useBitsMask1"/>
+		<item value="" key="bitsMask1"/>
+		<item value="LED" key="fieldValue1"/>
+		<item value="0" key="tagIndex"/>
+		<item value="true" key="caseSensitive1"/>
+		<item value="218" key="h"/>
+		<item value="24" key="y"/>
+		<item value="contains" key="operatorName1"/>
+		<item value="65" key="x"/>
+	</section>
+</section>
