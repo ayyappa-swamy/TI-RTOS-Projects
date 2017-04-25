@@ -142,20 +142,17 @@ Int stringLength(char *string)
 
 void printDeviceState(void)
 {
-	/*int index = 0;
+	int index = 0;
 
 	for (index = 0; index < 4; index++){
 		System_printf("\nIndex: %d, State: %d", index, groupArray[0].deviceArray[index].deviceState);
-	}*/
-	System_printf("\nStructure: _%s_ \n", (Char*)&groupArray);
-	System_flush();
+	}
 }
 
 void processData(char *dataBuf)
 {
 	PinoutSet();
 	printDeviceState();
-	//System_printf("The dataBuf is %s, length is %d\n", dataBuf, stringLength(dataBuf));
 }
 
 Int strtoint(Char *string, Int length)
@@ -192,23 +189,21 @@ Int setBrightness(SOCKET s, int length, char *pArgs)
 
 Int getTime(SOCKET s, int length, char *pArgs)
 {
-    Char buf[100];
-    Char buf2[50];
-    //System_printf("length : %d\npArgs :",length);//, pArgs);
-    //System_flush();
+    Char htmlBuffer[100];
+    Char socketBuffer[50];
 
-    int lee = recv(s,buf2,length,MSG_WAITALL);
-    buf2[lee] = '\0';
+    int recvdLength = recv(s,socketBuffer,length,MSG_WAITALL);
+    socketBuffer[recvdLength] = '\0';
     httpSendStatusLine(s, HTTP_OK, CONTENT_TYPE_HTML);
     httpSendClientStr(s, CRLF);
 
     httpSendClientStr(s,
         "<html><head><title>SYS/BIOS Clock "\
 	"Time</title></head><body><h1>Time</h1>\n");
-    System_sprintf(buf, "<p>args : %s, lee : %d ,groupArray : %c</p><p>\n", buf2, lee, ((Char*)&groupArray)[0]);
-    httpSendClientStr(s, buf);
+    System_sprintf(htmlBuffer, "<p>args : %s, lee : %d ,groupArray : %c</p><p>\n", socketBuffer, recvdLength, ((Char*)&groupArray)[0]);
+    httpSendClientStr(s, htmlBuffer);
     httpSendClientStr(s, "</p></body></html>");
-    processData(buf2);
+    processData(socketBuffer);
     return (1);
 }
 
@@ -309,7 +304,6 @@ int main(void)
 
      /* Turn on user LED */
     GPIO_write(Board_LED0, Board_LED_ON);
-    GPIO_write(4, 1);
 
     System_printf("Starting the example\nSystem provider is set to SysMin. "
                   "Halt the target to view any SysMin contents in ROV.\n");
