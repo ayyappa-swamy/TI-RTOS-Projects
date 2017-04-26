@@ -243,6 +243,9 @@ Void RemoveWebFiles(Void)
     //efs_destroyfile("chip.jpg");
 }
 
+/*
+ * This function is used to initialize the PWM Module 0 Generator 2
+ */
 Void initPWMModule(Void)
 {
 	volatile uint32_t ui32Load;
